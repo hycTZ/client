@@ -9,14 +9,5 @@ services:
       - "8090:8090"
     volumes:
       - "/opt/logs/client:/opt/logs/client"    ##将/opt/logs/100003171目录挂载到宿主机的/opt/logs/100003171方便在宿主机上查看日志
-    #links:
-    #  - "demoserver"
-    networks:
-      - cloud_net
-networks:
-  cloud_net:
-    external:
-      name: cloud
-#networks:
-#  cloud:
-#    driver: bridge
+    links:
+      - "demoserver"
