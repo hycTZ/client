@@ -19,7 +19,7 @@ pip install --upgrade pip
 
 5. 安装docker compose
 pip install docker-compose
-------sudo pip install --upgrade --ignore-installed xxxx
+------sudo pip install --upgrade --ignore-installed xxxxxx
 6. 检查安装的docker compose版本
 docker-compose -version
 

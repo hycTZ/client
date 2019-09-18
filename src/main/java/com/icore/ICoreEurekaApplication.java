@@ -12,4 +12,6 @@ public class ICoreEurekaApplication {
     public static void main(String[] args) {
         SpringApplication.run( ICoreEurekaApplication.class, args );
     }
+
+    ///
 }

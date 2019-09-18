@@ -2,9 +2,9 @@ version: "3"
 
 services:
   democlient:                                         ##容器服务名
-    container_name: democlient                       ##容器名
+    container_name: democlient                       ##   容器名
     #build: apollo-configservice/src/main/docker/                ##Dockerfile路径
-    image: demo/client                           ##镜像名
+    image: demo/client                               ##镜像名
     ports:
       - "8090:8090"
     volumes:
