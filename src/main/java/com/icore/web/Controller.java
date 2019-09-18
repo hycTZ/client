@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/boot")
 public class Controller {
 
-    @RequestMapping("/test")
+    @RequestMapping("/client")
     public String test(){
-        return "TEST-OK";
+        return "TEST-OK********************";
     }
 
 }

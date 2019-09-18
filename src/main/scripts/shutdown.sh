@@ -1,5 +1,5 @@
 #!/bin/bash
-SERVICE_NAME=server
+SERVICE_NAME=client
 
 if [[ -z "$JAVA_HOME" && -d /usr/java/latest/ ]]; then
     export JAVA_HOME=/usr/java/latest/

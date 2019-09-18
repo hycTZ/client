@@ -1,0 +1,35 @@
+安装docker
+
+安装docker-compose
+二、CentOS 7 安装docker compose
+Compose有很多种安装方式，例如通过Shell、pip以及将Compose作为容器安装等。本文通过pip来安装Compose,其它安装方式可以参照官方文档
+
+1. 检查linux有没有安装python-pip包
+pip -V
+
+2. 没有安装python-pip执行下面命令
+yum -y install epel-release
+
+3. 执行成功之后，再次执行下面的命令
+yum -y install python-pip
+
+4. 对安装好的pip进行升级
+pip install --upgrade pip
+
+
+5. 安装docker compose
+pip install docker-compose
+------sudo pip install --upgrade --ignore-installed xxxx
+6. 检查安装的docker compose版本
+docker-compose -version
+
+7. 安装compose命令补全工具
+curl -L https://raw.githubusercontent.com/docker/compose/$(docker-compose version --short)/contrib/completion/bash/docker-compose -o /etc/bash_completion.d/docker-compose
+
+这样重新登陆之后，输入docker-compose并按下tab键，Compose就可以自动补全命令。
+
+
+
+
+
+

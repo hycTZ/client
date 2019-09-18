@@ -1,11 +1,11 @@
 version: "3"
 
 services:
-  demoserver:                                         ##容器服务名
-    container_name: demoserver                        ##容器名
+  democlient:                                         ##容器服务名
+    container_name: democlient                       ##容器名
     #build: apollo-configservice/src/main/docker/                ##Dockerfile路径
-    image: demo/server                           ##镜像名
+    image: demo/client                           ##镜像名
     ports:
-      - "8080:8080"    
+      - "8090:8090"
     volumes:
-      - "/opt/logs/server:/opt/logs/server"    ##将/opt/logs/100003171目录挂载到宿主机的/opt/logs/100003171方便在宿主机上查看日志
+      - "/opt/logs/client:/opt/logs/client"    ##将/opt/logs/100003171目录挂载到宿主机的/opt/logs/100003171方便在宿主机上查看日志

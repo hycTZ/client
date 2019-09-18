@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.hyc</groupId>
-    <artifactId>server</artifactId>
+    <artifactId>client</artifactId>
     <version>1.0-SNAPSHOT</version>
 
 
@@ -44,39 +44,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-    <!--<build>
-        <resources>
-            <resource>
-                &lt;!&ndash;配置文件路径  &ndash;&gt;
-                <directory>src/main/resources</directory> &lt;!&ndash;这里对应项目存放配置文件的目录&ndash;&gt;
-                &lt;!&ndash;开启filtering功能  &ndash;&gt;
-                <filtering>true</filtering>
-                <includes>
-                    &lt;!&ndash; 项目打包完成的包中只包含当前环境文件 &ndash;&gt;
-                    <include>application.yml</include>
-                </includes>
-            </resource>
-        </resources>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>1.5.2.RELEASE</version>
-                <configuration>
-                    <mainClass>${mainClass}</mainClass>&lt;!&ndash;springboot启动类目录&ndash;&gt;
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            &lt;!&ndash;创建一个自动可执行的jar或war文件 &ndash;&gt;
-                            <goal>repackage</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>-->
 
     <build>
         <plugins>

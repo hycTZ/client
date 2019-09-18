@@ -7,7 +7,7 @@ FROM openjdk:8-jre-alpine
 MAINTAINER ameizi <sxyx2008@163.com>
 
 ENV VERSION 1.0-SNAPSHOT
-ENV SERVER_PORT 8080
+ENV SERVER_PORT 8090
 # DataSource Info
 ENV DS_URL ""
 ENV DS_USERNAME ""
@@ -20,14 +20,14 @@ RUN echo "http://mirrors.aliyun.com/alpine/v3.8/main" > /etc/apk/repositories \
     && ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
     && echo "Asia/Shanghai" > /etc/timezone
 
-ADD server-${VERSION}.zip /server/server-${VERSION}.zip
+ADD client-${VERSION}.zip /client/client-${VERSION}.zip
 
-RUN unzip /server/server-${VERSION}.zip -d /server \
-    && rm -rf /server/server-${VERSION}.zip \
-    && sed -i '$d' /server/scripts/startup.sh \
-    && chmod +x /server/scripts/startup.sh \
-    && echo "tail -f /dev/null" >> /server/scripts/startup.sh
+RUN unzip /client/client-${VERSION}.zip -d /client \
+    && rm -rf /client/client-${VERSION}.zip \
+    && sed -i '$d' /client/scripts/startup.sh \
+    && chmod +x /client/scripts/startup.sh \
+    && echo "tail -f /dev/null" >> /client/scripts/startup.sh
 
 EXPOSE $SERVER_PORT
 
-CMD ["/server/scripts/startup.sh"]
+CMD ["/client/scripts/startup.sh"]
